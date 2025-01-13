@@ -1,5 +1,6 @@
 import "@/app/ui/global.css";
 import { inter } from "@/app/ui/fonts";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 /**
  * ルートレイアウト
@@ -12,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+
+        {/* Vercel Speed Insights Quickstart */}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
