@@ -1,8 +1,5 @@
 import SideNav from "@/app/ui/dashboard/sidenav";
 
-/** PPRの適用 */
-export const experimental_ppr = true;
-
 /**
  * ダッシュボードページ固有のレイアウト
  * 「/dashboard」配下にしかここで定義したUIは適用されない
