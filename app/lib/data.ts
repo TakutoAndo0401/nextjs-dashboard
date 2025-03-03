@@ -1,12 +1,5 @@
 import { neon } from "@neondatabase/serverless";
-import {
-	CustomerField,
-	CustomersTableType,
-	InvoiceForm,
-	InvoicesTable,
-	type LatestInvoiceRaw,
-	type Revenue,
-} from "./definitions";
+import type { LatestInvoiceRaw, Revenue } from "./definitions";
 import { formatCurrency } from "./utils";
 
 const sql = neon(process.env.DATABASE_URL as string);

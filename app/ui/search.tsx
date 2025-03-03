@@ -2,7 +2,7 @@
 
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { usePathname, useRouter } from "next/navigation";
-import { parseAsNumberLiteral, parseAsString, useQueryState } from "nuqs";
+import { useQueryState } from "nuqs";
 
 type Props = {
 	placeholder: string;
@@ -35,7 +35,7 @@ export default function Search({ placeholder }: Props) {
 				onChange={(e) => handleSearch(e.target.value)}
 				defaultValue={params || ""}
 			/>
-			<MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+			<MagnifyingGlassIcon className="-translate-y-1/2 absolute top-1/2 left-3 h-[18px] w-[18px] text-gray-500 peer-focus:text-gray-900" />
 		</div>
 	);
 }
