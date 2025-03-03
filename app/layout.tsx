@@ -8,18 +8,18 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
  * ここに追加したUIはアプリケーションのすべてのページで共有される
  */
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        <NuqsAdapter>{children}</NuqsAdapter>
+	return (
+		<html lang="en">
+			<body className={`${inter.className} antialiased`}>
+				<NuqsAdapter>{children}</NuqsAdapter>
 
-        {/* Vercel Speed Insights Quickstart */}
-        <SpeedInsights />
-      </body>
-    </html>
-  );
+				{/* Vercel Speed Insights Quickstart */}
+				<SpeedInsights />
+			</body>
+		</html>
+	);
 }
