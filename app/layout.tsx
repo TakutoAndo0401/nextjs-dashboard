@@ -1,6 +1,7 @@
 import "@/app/ui/global.css";
 import { inter } from "@/app/ui/fonts";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 /**
  * ルートレイアウト
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <NuqsAdapter>{children}</NuqsAdapter>
 
         {/* Vercel Speed Insights Quickstart */}
         <SpeedInsights />
